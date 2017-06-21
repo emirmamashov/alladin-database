@@ -13,10 +13,10 @@ var schema = new Schema({
     price: { type: Number },
     priceStock: { type: Number },
     seoUrl: { type: String },
-    promoStickers: { type: String },
+    promoStickerId: { type: Schema.Types.ObjectId, ref: 'PromoSticker' },
     image: { type: String },
-    producer: { type: Schema.Types.ObjectId, ref: 'Producer' },
-    category: { type: Schema.Types.ObjectId, ref: 'Category' },
+    producerId: { type: Schema.Types.ObjectId, ref: 'Producer' },
+    categoryId: { type: Schema.Types.ObjectId, ref: 'Category' },
     categories: [
         { type: Schema.Types.ObjectId, ref: 'Category' }
     ]
