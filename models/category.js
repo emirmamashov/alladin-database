@@ -6,7 +6,8 @@ var schema = new Schema({
     parentCategory: { type: Schema.Types.ObjectId, ref: 'Category' },
     description: { type: String },
     keywords: { type: String },
-    author: { type: String }
+    author: { type: String },
+    image: { type: String }
 });
 
 let Category = mongoose.model('Category', schema);
