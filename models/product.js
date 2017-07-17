@@ -17,10 +17,13 @@ var schema = new Schema({
     producerId: { type: Schema.Types.ObjectId, ref: 'Producer' },
     categoryId: { type: Schema.Types.ObjectId, ref: 'Category' },
     categories: [
-        { type: Schema.Types.ObjectId, ref: 'Category' }
+        {   type: Schema.Types.ObjectId, 
+            ref: 'Category',
+            default: []
+        }
     ],
     photos: [
-        { type: Schema.Types.ObjectId, ref: 'Photo' }
+        { type: Schema.Types.ObjectId, ref: 'Photo', default: [] }
     ]
 }, {
     timestamps: {
