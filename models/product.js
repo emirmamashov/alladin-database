@@ -14,12 +14,19 @@ var schema = new Schema({
     priceStock: { type: Number },
     seoUrl: { type: String },
     promoStickerId: { type: Schema.Types.ObjectId, ref: 'PromoSticker' },
-    image: { type: String },
     producerId: { type: Schema.Types.ObjectId, ref: 'Producer' },
     categoryId: { type: Schema.Types.ObjectId, ref: 'Category' },
     categories: [
         { type: Schema.Types.ObjectId, ref: 'Category' }
+    ],
+    photos: [
+        { type: Schema.Types.ObjectId, ref: 'Photo' }
     ]
+}, {
+    timestamps: {
+        createdAt: 'created_at',
+        updatedAt: 'update_at'
+    }
 });
 let Product = mongoose.model('Product', schema);
 module.exports = (registry) => {
