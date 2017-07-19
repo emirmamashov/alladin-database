@@ -7,7 +7,9 @@ var schema = new Schema({
     description: { type: String },
     keywords: { type: String },
     author: { type: String },
-    image: { type: String }
+    image: { type: String },
+    viewInMenu: { type: Boolean, default: false },
+    photo: { type: Schema.Types.ObjectId, ref: 'Photo' }
 });
 
 let Category = mongoose.model('Category', schema);
