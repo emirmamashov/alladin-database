@@ -3,7 +3,10 @@ let Schema = mongoose.Schema;
 
 let bannaerSchema = new Schema({
     name: { type: String, required: true },
-    photo: { type: Schema.Types.ObjectId, ref: 'Photo' }
+    photo: { type: Schema.Types.ObjectId, ref: 'Photo' },
+    photos: [
+        { type: Schema.Types.ObjectId, ref: 'Photo' }
+    ]
 }, {
     timestamps: {
         createdAt: 'created_at',
