@@ -6,7 +6,9 @@ let bannaerSchema = new Schema({
     photo: { type: Schema.Types.ObjectId, ref: 'Photo' },
     photos: [
         { type: Schema.Types.ObjectId, ref: 'Photo' }
-    ]
+    ],
+    buttonLink: { type: String },
+    buttonName: { type: String }
 }, {
     timestamps: {
         createdAt: 'created_at',

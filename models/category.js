@@ -9,7 +9,8 @@ var schema = new Schema({
     author: { type: String },
     image: { type: String },
     viewInMenu: { type: Boolean, default: false },
-    photo: { type: Schema.Types.ObjectId, ref: 'Photo' }
+    photo: { type: Schema.Types.ObjectId, ref: 'Photo' },
+    banner: { type: Schema.Types.ObjectId, ref: 'Banner' }
 });
 
 let Category = mongoose.model('Category', schema);
