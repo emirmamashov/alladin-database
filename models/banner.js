@@ -3,12 +3,16 @@ let Schema = mongoose.Schema;
 
 let bannaerSchema = new Schema({
     name: { type: String, required: true },
-    photo: { type: Schema.Types.ObjectId, ref: 'Photo' },
-    photos: [
-        { type: Schema.Types.ObjectId, ref: 'Photo' }
+    image: { type: String},
+    images: [
+        { type: String }
     ],
     buttonLink: { type: String },
-    buttonName: { type: String }
+    buttonName: { type: String },
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
+    }
 }, {
     timestamps: {
         createdAt: 'created_at',
