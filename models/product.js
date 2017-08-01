@@ -22,8 +22,9 @@ var schema = new Schema({
             default: []
         }
     ],
-    photos: [
-        { type: Schema.Types.ObjectId, ref: 'Photo', default: [] }
+    image: { type: String },
+    images: [
+        { type: String }
     ]
 }, {
     timestamps: {
