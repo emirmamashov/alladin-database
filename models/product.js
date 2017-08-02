@@ -25,7 +25,8 @@ var schema = new Schema({
     image: { type: String },
     images: [
         { type: String }
-    ]
+    ],
+    isHot: { type: Boolean, default: false }
 }, {
     timestamps: {
         createdAt: 'created_at',
