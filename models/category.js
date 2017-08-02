@@ -11,7 +11,8 @@ var schema = new Schema({
     images: [
         { type: String }
     ],
-    viewInMenu: { type: Boolean, default: false }
+    viewInMenu: { type: Boolean, default: false },
+    viewInLikeBlock: { type: Boolean, default: false }
 });
 
 let Category = mongoose.model('Category', schema);
