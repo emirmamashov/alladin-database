@@ -9,7 +9,7 @@ var userSchema = new Schema({
     address: { type: String },
     email: { type: String },
     password: { type: String, required: true },
-    isAdmin: { type: Boolean, required: true }
+    isAdmin: { type: Boolean, default: false}
 }, {
     timestamps: {
         createdAt: 'created_at',
