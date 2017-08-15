@@ -16,6 +16,12 @@ var schema = new Schema({
     promoStickerId: { type: Schema.Types.ObjectId, ref: 'PromoSticker' },
     producerId: { type: Schema.Types.ObjectId, ref: 'Producer' },
     categoryId: { type: Schema.Types.ObjectId, ref: 'Category' },
+    filters: [
+        {   type: Schema.Types.ObjectId, 
+            ref: 'Filter',
+            default: []
+        }
+    ],
     categories: [
         {   type: Schema.Types.ObjectId, 
             ref: 'Category',
