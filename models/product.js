@@ -11,6 +11,7 @@ var schema = new Schema({
     tegs: { type: String },
     phone: { type: Number },
     price: { type: Number },
+    priceTrade: { type: Number }, // оптовая цена
     priceStock: { type: Number },
     seoUrl: { type: String },
     promoStickerId: { type: Schema.Types.ObjectId, ref: 'PromoSticker' },
