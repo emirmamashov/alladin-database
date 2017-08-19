@@ -12,7 +12,7 @@ var schema = new Schema({
     phone: { type: Number },
     price: { type: Number },
     priceTrade: { type: Number }, // оптовая цена
-    priceStock: { type: Number },
+    priceStock: { type: Number }, // цена акция
     seoUrl: { type: String },
     promoStickerId: { type: Schema.Types.ObjectId, ref: 'PromoSticker' },
     producerId: { type: Schema.Types.ObjectId, ref: 'Producer' },
