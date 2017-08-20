@@ -12,6 +12,10 @@ let bannaerSchema = new Schema({
     category: {
         type: Schema.Types.ObjectId,
         ref: 'Category'
+    },
+    isShowInMainPage: {
+        type: Boolean,
+        default: false
     }
 }, {
     timestamps: {
