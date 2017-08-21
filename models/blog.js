@@ -8,7 +8,15 @@ let schema = new Schema({
     metaDescription: { type: String },
     metaKeywords: { type: String },
     text: { type: String },
-    seoUrl: { type: String }
+    seoUrl: { type: String },
+    countViewers: { 
+        type: Number,
+        default: 0
+    },
+    isShowInMainPage: {
+        type: Boolean,
+        default: false
+    }
 }, {
     timestamps: {
         createdAt: 'created_at',
