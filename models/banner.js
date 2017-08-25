@@ -16,6 +16,14 @@ let bannaerSchema = new Schema({
     isShowInMainPage: {
         type: Boolean,
         default: false
+    },
+    showInMainPageLeft: {
+        type: Boolean,
+        default: false
+    },
+    showInMainPageRight: {
+        type: Boolean,
+        default: false
     }
 }, {
     timestamps: {
