@@ -12,7 +12,15 @@ var schema = new Schema({
         { type: String }
     ],
     viewInMenu: { type: Boolean, default: false },
-    viewInLikeBlock: { type: Boolean, default: false }
+    viewInLikeBlock: { type: Boolean, default: false },
+    showInMainPageLeft: {
+        type: Boolean,
+        default: false
+    },
+    showInMainPageRight: {
+        type: Boolean,
+        default: false
+    }
 });
 
 let Category = mongoose.model('Category', schema);
