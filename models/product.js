@@ -12,6 +12,7 @@ var schema = new Schema({
     phone: { type: Number },
     price: { type: Number },
     priceTrade: { type: Number }, // оптовая цена
+    comments: { type: String },
     priceStock: { type: Number }, // цена акция
     seoUrl: { type: String },
     promoStickerId: { type: Schema.Types.ObjectId, ref: 'PromoSticker' },
