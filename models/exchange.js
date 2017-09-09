@@ -2,18 +2,17 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let exchangeSchema = new Schema({
-    dollar: { type: Number, default: 49 },
-    euro: { type: Number },
-    ruble: { type: Number },
-    tenge: { type: Number },
-    yen: { type: Number },
+    usd: { type: Number, default: 49 },
+    eur: { type: Number },
+    kzt: { type: Number },
+    rub: { type: Number }
 }, {
     timestamps: {
         createdAt: 'created_at',
         updatedAt: 'update_at'
     }
 });
-let Exchange = mongoose.model('Exchange', ConvertSchema);
+let Exchange = mongoose.model('Exchange', exchangeSchema);
 module.exports = (registry) => {
     registry['Exchange'] = Exchange;
 }
