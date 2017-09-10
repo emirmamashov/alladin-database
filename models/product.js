@@ -1,7 +1,9 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose');
+let mongoosePaginate = require('mongoose-paginate');
 
-var schema = new Schema({
+let Schema = mongoose.Schema;
+
+let schema = new Schema({
     name: { type: String, required: true },
     htmlH1: { type: String },
     htmlTitle: { type: String },
@@ -41,6 +43,7 @@ var schema = new Schema({
         updatedAt: 'update_at'
     }
 });
+schema.plugin(mongoosePaginate);
 let Product = mongoose.model('Product', schema);
 module.exports = (registry) => {
     registry['Product'] = Product;

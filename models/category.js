@@ -1,7 +1,9 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
 
-var schema = new Schema({
+let mongoosePaginate = require('mongoose-paginate');
+
+let schema = new Schema({
     name: { type: String, required: true },
     parentCategory: { type: Schema.Types.ObjectId, ref: 'Category' },
     description: { type: String },
@@ -22,6 +24,7 @@ var schema = new Schema({
         default: false
     }
 });
+schema.plugin(mongoosePaginate);
 
 let Category = mongoose.model('Category', schema);
 
