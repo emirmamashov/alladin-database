@@ -22,6 +22,10 @@ let schema = new Schema({
     showInMainPageRight: {
         type: Boolean,
         default: false
+    },
+    level: {
+        type: Number,
+        default: 0
     }
 });
 schema.plugin(mongoosePaginate);
