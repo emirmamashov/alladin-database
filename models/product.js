@@ -20,6 +20,7 @@ let schema = new Schema({
     promoStickerId: { type: Schema.Types.ObjectId, ref: 'PromoSticker' },
     producerId: { type: Schema.Types.ObjectId, ref: 'Producer' },
     categoryId: { type: Schema.Types.ObjectId, ref: 'Category' },
+    category: { type: Schema.Types.Mixed },
     filters: [
         {   type: Schema.Types.ObjectId, 
             ref: 'Filter',
